@@ -1,23 +1,125 @@
-/* Styles généraux */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #121212;
+.age-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+
+.modal-content {
+    background: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Animation d'apparition */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Titres et texte */
+.modal-content h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+}
+
+/* Boutons */
+.btn-yes, .btn-no {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    margin: 5px 0;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-yes {
+    background: #28a745;
     color: white;
 }
 
-/* Barre de navigation */
+.btn-no {
+    background: #dc3545;
+    color: white;
+}
+
+/* Effet hover */
+.btn-yes:hover {
+    background: #218838;
+}
+
+.btn-no:hover {
+    background: #c82333;
+}
+
+/* Responsive pour petits écrans */
+@media (max-width: 480px) {
+    .modal-content {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .modal-content h2 {
+        font-size: 1.3rem;
+    }
+
+    .modal-content p {
+        font-size: 0.9rem;
+    }
+
+    .btn-yes, .btn-no {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+}
+
+
+
+
+
+
+
 body {
     font-family: 'Helvetica Neue', Arial, sans-serif;
     overflow-x: hidden;
     color: #333;
 }
 
-.red-text {
-    color: #ff0000;
+.orange-text {
+    color: orange;
 }
 
+.blanc-text {
+    color: white;
+}
 .logo {
     font-weight: bold;
     font-size: 2rem;
@@ -47,47 +149,329 @@ body {
     border-bottom: 1px solid #f0f0f0;
 }
 
-/* Slider */
-.slider {
+.search-container {
     display: flex;
-    overflow: hidden;
+    align-items: center;
     width: 100%;
-    height: 300px;
+    max-width: 500px; /* Limite la taille du champ */
+    border-radius: 8px;
+    overflow: hidden; /* Garde un beau design */
+}
+
+.search-input {
+    flex: 1; /* Permet au champ de remplir l’espace disponible */
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px; /* Bord arrondi à gauche */
+}
+
+.search-btn {
+    padding: 10px 15px;
+    background-color: #dc3545; /* Rouge Bootstrap */
+    color: white;
+    border: none;
+    border-radius: 0 8px 8px 0; /* Bord arrondi à droite */
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.search-btn:hover {
+    background-color: #a71d2a; /* Rouge foncé au survol */
+}
+
+/* 📱 Responsive : Ajustement sur mobiles */
+@media (max-width: 576px) {
+    .search-container {
+        max-width: 100%; /* Utilise toute la largeur */
+    }
+    
+    .search-input {
+        font-size: 0.9rem; /* Réduit la taille du texte */
+        padding: 8px;
+    }
+    
+    .search-btn {
+        padding: 8px 12px;
+    }
+}
+
+
+
+
+
+.hero-section {
+    position: relative;
+    height: auto;
+}
+
+.hero-slide {
+    background-size: cover;
+    background-position: center;
+    height: 500px;
     position: relative;
 }
 
-.slides {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
+.hero-slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
-.slides img {
+.hero-content {
+    position: relative;
+    z-index: 10;
+    padding-top: 150px;
+    color: white;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+}
+
+.watch-button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 3px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-top: 1rem;
+    transition: background-color 0.3s;
+}
+
+.watch-button:hover {
+    background-color: #cc0000;
+}
+
+.custom-indicators {
+    position: absolute;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.custom-indicators button {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #999;
+    margin: 0 5px;
+    border: none;
+    opacity: 0.7;
+    transition: background-color 0.3s;
+}
+
+.custom-indicators button.active {
+    background-color: #ff0000;
+    opacity: 1;
+}
+
+
+
+
+
+
+.footer-red {
+    background-color: #ff0000;
+    color: white;
+    padding: 15px 0;
+}
+
+.login-btn, .register-btn {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.movie-card {
+    position: relative;
+    overflow: hidden;
+    background-color: #4d4d4d;
+    height: 200px;
+    margin-bottom: 10px;
+    transition: transform 0.3s;
     width: 100%;
-    height: auto;
+}
+
+.movie-card img {
+    width: 100%;
+    height: 100%;
     object-fit: cover;
 }
 
-/* Grille de films */
-.movie-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
+.movie-card:hover {
+    transform: scale(1.05);
 }
 
-.movie {
+.movie-title {
+    font-size: 0.9rem;
+    margin-top: 5px;
+    margin-bottom: 3px;
+    font-weight: 500;
+}
+
+.movie-year {
+    font-size: 0.8rem;
+    color: #888;
+}
+
+.movie-genre {
+    color: #666;
+}
+
+.section-title {
+    border-left: 4px solid #ff0000;
+    padding-left: 15px;
+    margin: 30px 0;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #555;
+}
+
+/***************************************************************************************/
+.filter-button {
+    background-color: #f0f0f0;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.filter-button.active {
+    background-color: #dc3545; /* Couleur rouge (ou celle que tu préfères) */
+    color: white;
+    transform: scale(1.05);
+}
+
+.filter-button:hover {
+    background-color: #e0e0e0;
+    transform: scale(1.02);
+}
+
+.filter-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/*********************************************************************************************************/
+.slider-nav {
+    background-color: #444;
+    color: white;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    cursor: pointer;
+}
+
+.slider-nav:hover {
+    background-color: #ff0000;
+}
+
+.shop-card {
     position: relative;
+    height: 170px;
+}
+
+.movie-info {
+    background-color: #f5f5f5;
+    padding: 6px 10px;
+    margin-top: -5px;
+}
+
+.price {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+.featured-movie {
+    position: relative;
+    height: 240px;
     overflow: hidden;
-    border-radius: 10px;
-    transition: transform 0.3s;
+    border-radius: 0;
+    margin-bottom: 0;
 }
 
-.movie img {
+.featured-movie img {
     width: 100%;
-    display: block;
-    border-radius: 10px;
+    height: 100%;
+    object-fit: cover;
 }
 
-.movie:hover {
-    transform: scale(1.1);
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    color: #ff0000;
+    opacity: 0.9;
+    cursor: pointer;
 }
+
+.featured-info {
+    border-radius: 0;
+    font-size: 0.9rem;
+    height: auto;
+    padding: 15px !important;
+}
+
+.featured-info h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.featured-info p {
+    margin-bottom: 0.5rem;
+    font-size: 0.8rem;
+    line-height: 1.4;
+}
+
+.featured-info strong {
+    display: block;
+    margin-bottom: 3px;
+}
+
+.contact-form {
+    background-color: #f8f8f8;
+    padding: 30px;
+    border-radius: 5px;
+}
+
+.contact-form input, .contact-form textarea {
+    border-radius: 0;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    margin-bottom: 15px;
+    background-color: #fff;
+}
+
+.contact-form textarea {
+    resize: none;
+}
+  /* -send button- */
