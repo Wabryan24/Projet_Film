@@ -108,6 +108,7 @@
 
 
 body {
+    background-color: black;
     font-family: 'Helvetica Neue', Arial, sans-serif;
     overflow-x: hidden;
     color: #333;
@@ -118,7 +119,7 @@ body {
 }
 
 .blanc-text {
-    color: white;
+    color: rgb(250, 249, 249);
 }
 .logo {
     font-weight: bold;
