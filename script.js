@@ -1,13 +1,41 @@
-document.addEventListener("DOMContentLoaded", function () {
-    var heroCarousel = document.getElementById("heroCarousel");
-    if (heroCarousel) {
-      new bootstrap.Carousel(heroCarousel, {
-        interval: 5000,
-        wrap: true,
-        keyboard: true,
-        pause: "hover",
-      });
+document.addEventListener("DOMContentLoaded", () => {
+    const slides = document.querySelectorAll(".hero-slide");
+    const prevBtn = document.querySelector(".prev-btn");
+    const nextBtn = document.querySelector(".next-btn");
+    let currentIndex = 0;
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.classList.remove("active");
+            if (i === index) {
+                slide.classList.add("active");
+            }
+        });
     }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    function prevSlide() {
+        currentIndex = (currentIndex - 1 + slides.length) % slides.length;
+        showSlide(currentIndex);
+    }
+
+    nextBtn.addEventListener("click", nextSlide);
+    prevBtn.addEventListener("click", prevSlide);
+
+    // Auto-play du carousel toutes les 5 secondes
+    setInterval(nextSlide, 5000);
+});
+
+
+
+
+
+
+
   
     const filterButtons = document.querySelectorAll(".filter-button");
     filterButtons.forEach((button) => {
@@ -23,8 +51,8 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       });
     });
-  
-  
+
+    {
       card.addEventListener("mouseleave", function () {
         this.style.transform = "scale(1)";
         this.style.boxShadow = "none";
@@ -33,7 +61,7 @@ document.addEventListener("DOMContentLoaded", function () {
           overlay.remove();
         }
       });
-    });
+    };
   
   /*************************-- Cette barre de recherche :
   *Enregistre toutes les recherches passées (historique).
