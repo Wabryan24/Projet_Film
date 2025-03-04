@@ -1,67 +1,188 @@
 <!DOCTYPE html>
-<html lang="en" data-theme = "dark">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flix prime</title>
-    <link rel="stylesheet" href="">
+    <title>Flix Prime</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/components/carousel/">
+</head>
     
 </head>
 <body>
+    <!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flix Prime</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+                <div class="container">
+                    <a class="navbar-brand logo" href="#"><span class="yellow-text">FLIX</span><span class="black-text">PRIME</span></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarContent">
+                        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#home">HOME</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#home">Acerca</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="#home">Contenido</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="genresDropdown" role="button" data-bs-toggle="dropdown">
+                                    <span class="red-text">Elige Tu Pais</span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li><a class="dropdown-item" href="#featured-movies">Peru</a></li>
+                                    <li><a class="dropdown-item" href="#featured-movies">Argentina</a></li>
+                                    <li><a class="dropdown-item" href="#featured-movies">Bolivia</a></li>
+                                    <li><a class="dropdown-item" href="#featured-movies">Chile</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <a class="nav-link contact-link" href="#contact">CONTACT</a>
+                    </div>
+                </div>
+            </nav>
+        </header>
     
+        <section class="slider">
+            <div class="slides">
+                <img src="movie1.jpg" alt="Film 1">
+                <img src="movie2.jpg" alt="Film 2">
+                <img src="movie3.jpg" alt="Film 3">
+            </div>
+        </section>
+    
+        <section class="movie-grid">
+            <div class="movie"><img src="movie1.jpg" alt="Film 1"></div>
+            <div class="movie"><img src="movie2.jpg" alt="Film 2"></div>
+            <div class="movie"><img src="movie3.jpg" alt="Film 3"></div>
+            <div class="movie"><img src="movie4.jpg" alt="Film 4"></div>
+        </section>
+    
+        <script src="script.js"></script>
+    </body>
+    </html>
+
+
+
+
+    <section class="hero-section">
+        
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="hero-slide" style="background-image: url('banner1.jpg');">
+                        <div class="container text-center hero-content">
+                            <h1 class="hero-title">LATEST <span class="red-text">ON</span>LINE <span class="red-text">MO</span>VIES</h1>
+                            <p class="mb-4">IN SPACE NO ONE CAN HEAR YOU SCREAM</p>
+                            <button class="watch-button">WATCH TRAILER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('banner2.jpg');">
+                        <div class="container text-center hero-content">
+                            <h1 class="hero-title">FEATURED <span class="red-text">MO</span>VIES <span
+                                    class="red-text">TO</span>DAY</h1>
+                            <p class="mb-4">ALL THE LATEST BLOCKBUSTERS</p>
+                            <button class="watch-button">WATCH TRAILER</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('banner3.jpg');">
+                        <div class="container text-center hero-content">
+                            <h1 class="hero-title">PREMIUM <span class="red-text">HI</span>GH <span
+                                    class="red-text">QUA</span>LITY</h1>
+                            <p class="mb-4">EXPERIENCE CINEMA AT HOME</p>
+                            <button class="watch-button">WATCH TRAILER</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('banner4.jpg');">
+                        <div class="container text-center hero-content">
+                            <h1 class="hero-title">FEATURED <span class="red-text">MO</span>VIES <span
+                                    class="red-text">TO</span>DAY</h1>
+                            <p class="mb-4">ALL THE LATEST BLOCKBUSTERS</p>
+                            <button class="watch-button">WATCH TRAILER</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('banner5.jpg');">
+                        <div class="container text-center hero-content">
+                            <h1 class="hero-title">FEATURED <span class="red-text">MO</span>VIES <span
+                                    class="red-text">TO</span>DAY</h1>
+                            <p class="mb-4">ALL THE LATEST BLOCKBUSTERS</p>
+                            <button class="watch-button">WATCH TRAILER</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <div class="hero-slide" style="background-image: url('banner6.jpg');">
+                        <div class="container text-center hero-content">
+                            <h1 class="hero-title">FEATURED <span class="red-text">MO</span>VIES <span
+                                    class="red-text">TO</span>DAY</h1>
+                            <p class="mb-4">ALL THE LATEST BLOCKBUSTERS</p>
+                            <button class="watch-button">WATCH TRAILER</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-indicators custom-indicators">
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"
+                    aria-current="true"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="3"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="4"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="5"></button>
+                <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="6"></button>
+            </div>
+        </div>
+    </section>
+
+
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+
+
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+      <script src="script.js"></script>
 </body>
 </html>
 
-    <!-- Barre de navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand logo" href="#"><span class="yellow-text">FLIX</span>PRIME</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">HOME</a>
-                    </li>
+  
 
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Acerca</a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#home">Conternido</a>
-                    </li>
-
-
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="genresDropdown" role="button"
-                            data-bs-toggle="dropdown">
-                            <span class="red-text">Elige Tu Pais</span>
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#featured-movies">Peru</a></li>
-                            <li><a class="dropdown-item" href="#featured-movies">Argentina</a></li>
-                            <li><a class="dropdown-item" href="#featured-movies">Bolivia</a></li>
-                            <li><a class="dropdown-item" href="#featured-movies">Chile</a></li>
-                            <li><a class="dropdown-item" href="#featured-movies">Chile</a></li>
-                            <li><a class="dropdown-item" href="#featured-movies">Chile</a></li>
-                            <li><a class="dropdown-item" href="#featured-movies">Chile</a></li>
-                            <li><a class="dropdown-item" href="#featured-movies">Chile</a></li>
-                            <li><a class="dropdown-item" href="#featured-movies">Chile</a></li>
-                            <li><a class="dropdown-item" href="#featured-movies">Chile</a></li>
-                            <li><a class="dropdown-item" href="#featured-movies">Chile</a></li>
-                            <li><a class="dropdown-item" href="#featured-movies">Chile</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">CONTACT</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+   
 
 
 
-    /******************************************************************************************************************************************/
